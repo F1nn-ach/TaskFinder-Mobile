@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Status Indicator -->
+        <View
+            android:id="@+id/viewCategoryIndicator"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Task Content -->
+        <LinearLayout
+            android:id="@+id/linearLayoutContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewCategoryIndicator"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Task Title -->
+            <TextView
+                android:id="@+id/txtTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task Title"
+                android:textColor="#1565C0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Task Description -->
+            <TextView
+                android:id="@+id/txtTaskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="This is a description of the task which may span multiple lines. It provides details about what needs to be done."
+                android:textColor="#212121"
+                android:textSize="14sp" />
+
+            <!-- Task Price -->
+            <TextView
+                android:id="@+id/txtTaskPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$100.00"
+                android:textColor="#1B5E20"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Task Date -->
+            <TextView
+                android:id="@+id/txtTaskDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="01/01/2023"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+            <!-- Task Location -->
+            <TextView
+                android:id="@+id/txtTaskLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Location: City, Country"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Buttons Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewCategoryIndicator"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutContent">
+
+            <Button
+                android:id="@+id/btnViewTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1565C0"
+                android:text="View"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnDeleteTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:text="Delete"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

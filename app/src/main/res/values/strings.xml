@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TaskFinder</string>
+
+    <!--URL-->
+    <string name="root_url">http://192.168.112.1:8080/TaskFinderWebService</string>
+    <string name="register_url">/user/add</string>
+    <string name="login_url">/user/login</string>
+    <string name="list_user">/user/list</string>
+    <string name="getprofile">/user/getprofile</string>
+    <string name="updateprofile">/user/update</string>
+
+    <string name="global">Error,please try again.</string>
+</resources>

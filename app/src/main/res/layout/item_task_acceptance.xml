@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- แถบแสดงสถานะงาน -->
+        <View
+            android:id="@+id/viewStatusIndicator"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:background="#FF9800"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTaskButtonsLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ชื่องาน -->
+        <TextView
+            android:id="@+id/txtTaskTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="ชื่องาน"
+            android:textColor="#1565C0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txtTaskPrice"
+            app:layout_constraintStart_toEndOf="@+id/viewStatusIndicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ราคางาน -->
+        <TextView
+            android:id="@+id/txtTaskPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100.00"
+            android:textColor="#1B5E20"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- รายละเอียดผู้โพสต์งาน -->
+        <TextView
+            android:id="@+id/txtTaskClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="โพสต์โดย: ชื่อผู้โพสต์"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtTaskTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtTaskTitle" />
+
+        <!-- วันที่รับงาน -->
+        <TextView
+            android:id="@+id/txtAcceptedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="รับงานเมื่อ: 01/01/2023"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtTaskClient"
+            app:layout_constraintTop_toBottomOf="@+id/txtTaskClient" />
+
+        <!-- รายละเอียดงานโดยย่อ -->
+        <TextView
+            android:id="@+id/txtTaskDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="รายละเอียดงานโดยย่อ..."
+            android:textColor="#212121"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtAcceptedDate"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcceptedDate" />
+
+        <!-- ปุ่มดำเนินการ -->
+        <LinearLayout
+            android:id="@+id/txtTaskButtonsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtTaskDescription"
+            app:layout_constraintTop_toBottomOf="@+id/txtTaskDescription">
+
+            <Button
+                android:id="@+id/btnViewDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1565C0"
+                android:text="ดูรายละเอียด"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="ส่งงาน"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:text="ยกเลิก"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

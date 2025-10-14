@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "456124812760",
+    "project_id": "taskfinder-97e63",
+    "storage_bucket": "taskfinder-97e63.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456124812760:android:c0209d126ae1e30a4b76ad",
+        "android_client_info": {
+          "package_name": "com.lab.taskfinder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAS-59_VdNIlFSvC2iI2KEpLY4JVbickk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
