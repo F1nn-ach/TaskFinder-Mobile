@@ -1,1 +1,1 @@
-# My thrid year final project in moblie subject using java kotlin
+# My thrid year final project in mobile subject using java kotlin
